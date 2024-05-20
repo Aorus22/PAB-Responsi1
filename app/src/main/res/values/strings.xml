@@ -38,4 +38,6 @@
     <string name="favourites">Favourites:</string>
     <string name="popularity">Popularity:</string>
     <string name="avg_score">Avg Score:</string>
+    <string name="icon_person">Icon Person</string>
+    <string name="poster_anime">Poster Anime</string>
 </resources>
