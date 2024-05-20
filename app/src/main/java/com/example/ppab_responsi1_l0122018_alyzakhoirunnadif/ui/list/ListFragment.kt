@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.ListAdapter
 import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.R
 import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.data.Anime
-import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.AnimeService
-import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.RetrofitClient
+import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.ApiService
+import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.ApiConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -85,7 +85,7 @@ class ListFragment : Fragment() {
         val selectedSeason = seasonOptions[seasonSpinner.selectedItemPosition]
         val selectedYear = yearOptions[yearSpinner.selectedItemPosition].toInt()
 
-        val animeService = RetrofitClient.instance.create(AnimeService::class.java)
+        val apiService = ApiConfig.instance.create(ApiService::class.java)
 
         val query = """
             query GetAnimeList {
@@ -108,7 +108,7 @@ class ListFragment : Fragment() {
 
         lifecycleScope.launch(Dispatchers.IO) {
             try {
-                val response = animeService.getAnimeList(requestBody)
+                val response = apiService.getAnimeList(requestBody)
                 val animeList = response.data.Page.media
                 withContext(Dispatchers.Main) {
                     loadingProgressBar.visibility = View.GONE

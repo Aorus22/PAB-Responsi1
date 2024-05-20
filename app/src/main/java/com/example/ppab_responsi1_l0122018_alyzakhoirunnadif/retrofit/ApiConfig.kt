@@ -3,7 +3,7 @@ package com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitClient {
+object ApiConfig {
     private const val BASE_URL = "https://graphql.anilist.co/"
 
     val instance: Retrofit by lazy {

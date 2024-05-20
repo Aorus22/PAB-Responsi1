@@ -6,8 +6,8 @@ import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.data.AnimeDetail
 import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.databinding.ActivityDetailBinding
-import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.AnimeService
-import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.RetrofitClient
+import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.ApiService
+import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.retrofit.ApiConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -15,7 +15,7 @@ import kotlinx.coroutines.withContext
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
-    private val animeService = RetrofitClient.instance.create(AnimeService::class.java)
+    private val apiService = ApiConfig.instance.create(ApiService::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +66,7 @@ class DetailActivity : AppCompatActivity() {
 
         lifecycleScope.launch(Dispatchers.IO) {
             try {
-                val response = animeService.getAnimeDetail(requestBody)
+                val response = apiService.getAnimeDetail(requestBody)
                 val animeDetail = response.data.Media
                 withContext(Dispatchers.Main) {
                     updateUI(animeDetail)

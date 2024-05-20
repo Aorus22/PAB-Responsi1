@@ -6,7 +6,7 @@ import retrofit2.http.Body
 import retrofit2.http.Headers
 import retrofit2.http.POST
 
-interface AnimeService {
+interface ApiService {
     @Headers("Content-Type: application/json")
     @POST("/")
     suspend fun getAnimeList(@Body request: Map<String, String>): AnimeResponse
