@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PPAB-Responsi1_L0122018_AlyzaKhoirunNadif</string>
+    <string name="title_home">Home</string>
+    <string name="title_list">List</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="nama_aplikasi">Responsi 1</string>
+    <string name="sambutan">Welcome</string>
+    <string name="isi_sambutan">
+    This is a simple wiki and database for Honkai: Star Rail, a HoYoverse turn-based space fantasy RPG.
+    </string>
+    <string name="go_to_profile">Go To Profile</string>
+    <string name="go_to_my_github">Go To My Github</string>
+    <string name="gambar_random">Gambar Random</string>
+    <string name="deskripsi_diri">Deskripsi Diri</string>
+    <string name="foto_profil">foto profil</string>
+    <string name="share">Share</string>
+    <string name="nim">L0122018</string>
+    <string name="name">Alyza Khoirun Nadif</string>
+    <string name="jurusan_angkatan">Informatika, 2022</string>
+    <string name="fakultas">Fatisda</string>
+    <string name="universitas">Universitas Sebelas Maret</string>
+    <string name="email">alyzanadif04@gmail.com</string>
+    <string name="description">Description</string>
+    <string name="data_deskripsi">Total Achievement 408\nSimulated Universe 9\nMemory of Chaos 21</string>
+    <string name="Title">Honkai Star Rail Characters</string>
+    <string name="go_to_github">Go To Github</string>
+    <string name="title_detail">Detail</string>
+    <string name="profile">Profile</string>
+</resources>
