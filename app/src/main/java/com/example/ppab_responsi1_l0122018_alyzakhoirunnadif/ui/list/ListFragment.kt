@@ -57,12 +57,12 @@ class ListFragment : Fragment() {
         seasonAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         seasonSpinner.adapter = seasonAdapter
 
-        seasonSpinner.setSelection(seasonOptions.indexOf("WINTER"))
-        yearSpinner.setSelection(yearOptions.indexOf("2024"))
-
         val yearAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, yearOptions)
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         yearSpinner.adapter = yearAdapter
+
+        seasonSpinner.setSelection(seasonOptions.indexOf("FALL"))
+        yearSpinner.setSelection(yearOptions.indexOf("2023"))
 
         view.findViewById<Button>(R.id.fetchButton).setOnClickListener {
             fetchAnimeList()
@@ -115,12 +115,8 @@ class ListFragment : Fragment() {
                     updateUI(animeList)
                     viewModel.saveAnimeList(animeList)
                 }
-            } catch (e: IOException) {
-                Log.e("ListFragment", "Network error: ${e.localizedMessage}", e)
-            } catch (e: HttpException) {
-                Log.e("ListFragment", "HTTP error: ${e.localizedMessage}", e)
             } catch (e: Exception) {
-                Log.e("ListFragment", "Unexpected error: ${e.localizedMessage}", e)
+                e.printStackTrace()
             }
         }
     }
