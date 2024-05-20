@@ -62,7 +62,7 @@ class DetailActivity : AppCompatActivity() {
             }
         """.trimIndent()
 
-        val requestBody = mapOf("query" to query, "variables" to null)
+        val requestBody = mapOf("query" to query)
 
         lifecycleScope.launch(Dispatchers.IO) {
             try {
