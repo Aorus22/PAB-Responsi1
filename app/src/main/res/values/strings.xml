@@ -5,9 +5,9 @@
     <string name="title_profile">Profile</string>
 
     <string name="nama_aplikasi">Responsi 1</string>
-    <string name="sambutan">Welcome</string>
+    <string name="sambutan">Anime List</string>
     <string name="isi_sambutan">
-    This is a simple wiki and database for Honkai: Star Rail, a HoYoverse turn-based space fantasy RPG.
+    This application is an application for viewing anime lists. Existing data is taken using the API provided by anilist.co
     </string>
     <string name="go_to_profile">Go To Profile</string>
     <string name="go_to_my_github">Go To My Github</string>
@@ -27,4 +27,15 @@
     <string name="go_to_github">Go To Github</string>
     <string name="title_detail">Detail</string>
     <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="cover_anime">Cover Anime</string>
+    <string name="source">Source :</string>
+    <string name="status">Status :</string>
+    <string name="total_eps">Total Eps:</string>
+    <string name="duration">Duration :</string>
+    <string name="genre">Genre :</string>
+    <string name="deskripsi">Deskripsi:</string>
+    <string name="favourites">Favourites:</string>
+    <string name="popularity">Popularity:</string>
+    <string name="avg_score">Avg Score:</string>
 </resources>
