@@ -13,13 +13,8 @@ import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.R
 import com.example.ppab_responsi1_l0122018_alyzakhoirunnadif.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
-
     private var _binding: FragmentProfileBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,8 +31,6 @@ class ProfileFragment : Fragment() {
         }
 
         val btnShare = root.findViewById<Button>(R.id.btn_share)
-
-        // Mendapatkan nilai dari TextView yang ada di layout
         val namaTextView = root.findViewById<TextView>(R.id.data_nama)
         val nimTextView = root.findViewById<TextView>(R.id.data_nim)
         val jurusanAngkatanTextView = root.findViewById<TextView>(R.id.data_jurusan_angkatan)
